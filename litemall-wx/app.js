@@ -4,6 +4,7 @@ var user = require('./utils/user.js');
 
 App({
   onLaunch: function() {
+    // 管理小程序更新
     const updateManager = wx.getUpdateManager();
     wx.getUpdateManager().onUpdateReady(function() {
       wx.showModal({

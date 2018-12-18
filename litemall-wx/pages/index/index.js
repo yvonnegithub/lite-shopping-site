@@ -117,6 +117,7 @@ Page({
   onUnload: function() {
     // 页面关闭
   },
+  // 领取优惠券
   getCoupon(e) {
     if (!app.globalData.hasLogin) {
       wx.navigateTo({

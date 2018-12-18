@@ -10,6 +10,7 @@ const api = require('../config/api.js');
  */
 function checkSession() {
   return new Promise(function(resolve, reject) {
+    // 校验 session_key 是否有效，从而避免小程序反复执行登录流程
     wx.checkSession({
       success: function() {
         resolve(true);
