@@ -1,6 +1,7 @@
 var api = require('../config/api.js');
 var app = getApp();
 
+// 格式化时间戳 2018-10-7 22:10:00
 function formatTime(date) {
   var year = date.getFullYear()
   var month = date.getMonth() + 1

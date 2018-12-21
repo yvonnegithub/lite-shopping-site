@@ -23,7 +23,7 @@ function checkSession() {
 }
 
 /**
- * Promise封装wx.login
+ * Promise封装wx.login，微信登录
  */
 function login() {
   return new Promise(function(resolve, reject) {
