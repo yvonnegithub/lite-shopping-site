@@ -45,6 +45,7 @@ Page({
 
     });
   },
+  // 账号登录
   accountLogin: function() {
     wx.navigateTo({
       url: "/pages/auth/accountLogin/accountLogin"

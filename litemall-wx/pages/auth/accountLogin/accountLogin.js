@@ -31,7 +31,6 @@ Page({
   },
   accountLogin: function() {
     var that = this;
-
     if (this.data.password.length < 1 || this.data.username.length < 1) {
       wx.showModal({
         title: '错误信息',
