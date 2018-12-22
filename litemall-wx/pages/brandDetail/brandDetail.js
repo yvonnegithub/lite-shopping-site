@@ -18,6 +18,7 @@ Page({
     that.setData({
       id: parseInt(options.id)
     });
+    // 获取品牌
     this.getBrand();
   },
   getBrand: function() {
@@ -34,6 +35,7 @@ Page({
       }
     });
   },
+  // 获取商品列表
   getGoodsList() {
     var that = this;
 
