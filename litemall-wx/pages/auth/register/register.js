@@ -30,6 +30,7 @@ Page({
     // 页面关闭
 
   },
+  // 发送验证码
   sendCode: function() {
     let that = this;
 
@@ -77,6 +78,7 @@ Page({
       }
     });
   },
+  // 请求注册
   requestRegister: function(wxCode) {
     let that = this;
     wx.request({
@@ -115,6 +117,7 @@ Page({
       }
     });
   },
+  // 点击注册
   startRegister: function() {
     var that = this;
 

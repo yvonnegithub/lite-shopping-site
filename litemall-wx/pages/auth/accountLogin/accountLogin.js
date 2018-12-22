@@ -29,6 +29,7 @@ Page({
     // 页面关闭
 
   },
+  // 账号密码登录
   accountLogin: function() {
     var that = this;
     if (this.data.password.length < 1 || this.data.username.length < 1) {
@@ -53,7 +54,7 @@ Page({
       success: function(res) {
         if (res.data.errno == 0) {
           that.setData({
-            loginErrorCount: 0
+            loginErrorCount: 0                        
           });
           app.globalData.hasLogin = true;
           wx.setStorageSync('userInfo', res.data.data.userInfo);
@@ -76,12 +77,14 @@ Page({
       }
     });
   },
+  // 绑定用户名输入
   bindUsernameInput: function(e) {
 
     this.setData({
       username: e.detail.value
     });
   },
+  // 绑定输入密码
   bindPasswordInput: function(e) {
 
     this.setData({
@@ -94,6 +97,7 @@ Page({
       code: e.detail.value
     });
   },
+  // 清除用户名或者密码
   clearInput: function(e) {
     switch (e.currentTarget.id) {
       case 'clear-username':

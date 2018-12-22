@@ -58,6 +58,7 @@ Page({
       }
     });
   },
+  // 重置密码
   startReset: function() {
     var that = this;
 
