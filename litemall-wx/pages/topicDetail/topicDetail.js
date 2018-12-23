@@ -42,6 +42,7 @@ Page({
       }
     });
   },
+  // 获取评论列表
   getCommentList() {
     let that = this;
     util.request(api.CommentList, {
@@ -59,6 +60,7 @@ Page({
       }
     });
   },
+  // 发表评论
   postComment() {
     if (!app.globalData.hasLogin) {
       wx.navigateTo({
@@ -74,7 +76,7 @@ Page({
 
   },
   onShow: function() {
-    // 页面显示
+    // 页面显示时获取评论列表
     this.getCommentList();
   },
   onHide: function() {
