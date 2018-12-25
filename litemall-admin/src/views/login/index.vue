@@ -31,6 +31,7 @@
 export default {
   name: 'Login',
   data() {
+    // 校验用户名
     const validateUsername = (rule, value, callback) => {
       if (validateUsername == null) {
         callback(new Error('请输入正确的管理员用户名'))
@@ -38,6 +39,7 @@ export default {
         callback()
       }
     }
+    // 校验密码
     const validatePassword = (rule, value, callback) => {
       if (value.length < 6) {
         callback(new Error('管理员密码长度应大于6'))
@@ -86,6 +88,7 @@ export default {
         if (valid && !this.loading) {
           this.loading = true
           this.$store.dispatch('LoginByUsername', this.loginForm).then(() => {
+            console.log('redirect',this.redirect)
             this.loading = false
             this.$router.push({ path: this.redirect || '/' })
           }).catch(response => {
