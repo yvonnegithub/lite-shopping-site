@@ -84,6 +84,7 @@ export default {
       }
     },
     handleLogin() {
+      // 处理登录
       this.$refs.loginForm.validate(valid => {
         if (valid && !this.loading) {
           this.loading = true
