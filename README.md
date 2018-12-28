@@ -5,6 +5,7 @@
 * [FAQ](https://linlinjava.gitbook.io/litemall/7)
 
 ### litemall-wx:微信小程序； litemall-wx-api：小程序使用的接口（java）
+## lazy
 
 
 
